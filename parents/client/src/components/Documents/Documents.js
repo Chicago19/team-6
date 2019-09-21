@@ -5,7 +5,9 @@ class Documents extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      documents: []
+      documents: [],
+      show_pdf: false,
+      pdf_url: "",
     };
   }
 
@@ -30,7 +32,7 @@ class Documents extends Component {
 
   render() {
     const docs = this.state.documents.map(function(document){
-      return <li> {document.title} </li>;
+      return <li className="document-titles" onClick={this.setState({show_pdf : true, pdf_url: document.url});}> {document.title} </li>;
     });
     return (
       <div id="documents-container">

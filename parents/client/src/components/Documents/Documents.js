@@ -29,7 +29,6 @@ class Documents extends Component {
   }
 
   render() {
-    console.log(this.state.documents);
     return (
       <div className="App">
         <header className="App-header">

@@ -3,7 +3,8 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableHighlight
+  TouchableHighlight,
+  ImageBackground
 } from 'react-native';
 
 class ParentScreen extends Component {
@@ -15,12 +16,14 @@ class ParentScreen extends Component {
     console.log(this.props, "props is here");
     return (
       <View style={styles.container}>
+        <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
         <TouchableHighlight
           onPress={() => navigate("ScreenTwo", {screen: "Screen Two"})}
           style={styles.button}>
           <Text
             style={styles.buttonText}>Parent </Text>
         </TouchableHighlight>
+        </ImageBackground>
       </View>
     );
   }
@@ -39,7 +42,9 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     height: 40,
     justifyContent: 'center',
-    backgroundColor: '#C56EE0'
+    backgroundColor: '#C56EE0',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
   buttonText: {
     color: 'black',

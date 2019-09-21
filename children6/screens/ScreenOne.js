@@ -4,7 +4,8 @@ import {
   Text,
   StyleSheet,
   TouchableHighlight,
-  ImageBackground
+  ImageBackground,
+  Image
 } from 'react-native';
 
 class ScreenOne extends Component {
@@ -16,7 +17,9 @@ class ScreenOne extends Component {
     console.log(this.props, "props is here");
     return (
       <View style={styles.container}>
-         <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
+
+        <Image source={require('../static/Childrens-Advocacy-Center.jpg')} style={{width: '100', height: '300'}}/>
+        <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
         <TouchableHighlight
           onPress={() => navigate("ScreenTwo", {screen: "Screen Two"})}
           style={styles.button}>

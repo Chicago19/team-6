@@ -3,7 +3,9 @@ import {
   StyleSheet,
   View,
   Text,
-  TouchableHighlight
+  TouchableHighlight,
+  Linking,
+  ImageBackground
 } from 'react-native';
 
 class ScreenThree extends Component {
@@ -15,16 +17,25 @@ class ScreenThree extends Component {
     const { params } = this.props.navigation.state;
     return (
       <View style={styles.container}>
+        <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
         <Text style={styles.titleText}>{params.screen}</Text>
+        
         <TouchableHighlight
           style={styles.button}
           onPress={() => this.props.navigation.goBack()}>
           <Text style={styles.buttonText}>Go Back</Text>
         </TouchableHighlight>
+        <TouchableHighlight
+          style={styles.button}
+          onPress={() => openApp()}>
+          <Text style={styles.buttonText}>Go Back</Text>
+        </TouchableHighlight>
+        </ImageBackground>
       </View>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -43,7 +54,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: '#C56EE0',
     height: 50,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
   buttonText: {
     color: 'white',

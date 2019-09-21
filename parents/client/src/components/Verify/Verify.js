@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Verify.css";
+import "./Verify.scss";
 
 class Verify extends Component {
   state = {

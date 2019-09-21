@@ -14,6 +14,7 @@ Our project run using React.JS for the front-end, Express.JS for the backend, an
 4. react-dom; `npm install react react-dom --save`
 4. concurrently; `npm install concurrently --save`
 5. MongoDB; `npm install mongodb --save`
+6. sass; `npm install node-sass -S`
 
 Then, `cd` into the `parents` folder and run `npm run dev`.
 

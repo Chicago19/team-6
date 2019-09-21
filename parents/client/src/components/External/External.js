@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PDFview from "../PDFview/PDFview"
 import "./External.scss";
 
 class External extends Component {
@@ -6,8 +7,11 @@ class External extends Component {
     super(props);
 
     this.state = {
-      resources: []
+      resources: [],
+      show_res: false,
+      res_url: "",
     };
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   async componentDidMount() {
@@ -29,20 +33,29 @@ class External extends Component {
       );
   }
 
+  handleOnClick(url){
+    this.setState({
+      show_res : true,
+      res_url: url,
+     });
+  }
+
   render() {
+    const resources = this.state.resources.map((resource) => {
+      return <li className="resource-titles" onClick={() => this.handleOnClick(resource.url)}>
+      {resource.title}
+       </li>;
+    });
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>EXTERNAL RESOURCES COMPONENT</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="resources-container">
+      <div id="resources-sidebar">
+        <ul>
+          {resources}
+        </ul>
+      </div>
+      <div id="pdf-viewer">
+      </div>
+        {this.state.show_res ? (<PDFview url={this.state.res_url} />) : (<div />)}
       </div>
     );
   }

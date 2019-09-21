@@ -151,7 +151,6 @@ class ScreenThree extends Component {
           source={require("../static/purplehex.jpg")}
           style={{ width: "100%", height: "100%" }}
         >
-          <Text style={styles.titleText}>{params.screen}</Text>
 
           <View>
             {this.state.apps.map(app => {

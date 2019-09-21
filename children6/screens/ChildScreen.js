@@ -138,7 +138,7 @@ class ScreenThree extends Component {
     };
   }
   static navigationOptions = ({ navigation }) => ({
-    title: `Chicage Children's Advocacy Center`
+    title: `Chicago Children's Advocacy Center`
   });
 
   handlePress(app) {}

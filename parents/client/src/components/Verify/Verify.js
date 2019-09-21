@@ -23,9 +23,11 @@ class Verify extends Component {
       }
     }
 
-  componentWillUnmount() {
-    setTimeout(window.history.forward(),0);
-    window.onunload=function(){};
+  componentWillMount() {
+    window.history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+    window.history.pushState(null, null, document.URL);
+});
   }
 
   render() {

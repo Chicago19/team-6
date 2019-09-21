@@ -24,8 +24,8 @@ class Verify extends Component {
     }
   render() {
     return (
-      <div className='verify-container'>
-      <p>Enter the password from the receptionist below:</p>
+      <div id='verify-container'>
+      <p id="pw-text">Enter the password from the receptionist below:</p>
           <form onSubmit={this.handleSubmit}>
                   <input type="password" value={this.state.value} onChange={this.handleChange}/>
               <input type="submit" value="Submit" />

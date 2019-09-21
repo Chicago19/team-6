@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Animated, Text, View, Button } from 'react-native';
+import { Animated, Text, View, Alert, Button } from 'react-native';
 
 const FadeInView = (props) => {
   const [fadeAnim] = useState(new Animated.Value(0))  // Initial value for opacity: 0
@@ -29,18 +29,18 @@ const FadeInView = (props) => {
 // You can then use your `FadeInView` in place of a `View` in your components:
 export default () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <FadeInView style={{width: 250, height: 50, backgroundColor: 'purple'}}>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "black"}}>
+      <FadeInView style={{width: 250, height: 50, backgroundColor: '#865ab0'}}>
         <Button title="Parents" color="white"/>
       </FadeInView>
-      <FadeInView style={{width: 250, height: 50, backgroundColor: 'white'}}>
+      <FadeInView style={{width: 250, height: 50, backgroundColor: 'black'}}>
         <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
       </FadeInView>
-      <FadeInView style={{width: 250, height: 50, backgroundColor: 'white'}}>
+      <FadeInView style={{width: 250, height: 50, backgroundColor: 'black'}}>
         <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
       </FadeInView>
-      <FadeInView style={{width: 250, height: 50, backgroundColor: 'purple'}}>
-        <Button title="Children" color="white"/>
+      <FadeInView style={{width: 250, height: 50, backgroundColor: '#865ab0'}}>
+        <Button title="Children" color="white" onPress={() => Alert.alert('Go to child page')}/>
       </FadeInView>
     </View>
 

@@ -67,7 +67,7 @@ class App extends Component {
  setTimeout() {
    this.warnTimeout = setTimeout(this.warn, 45 * 1000);
 
-   this.logoutTimeout = setTimeout(this.logout, 70 * 1000);
+   this.logoutTimeout = setTimeout(this.logout, 105 * 1000);
  }
 
  resetTimeout() {

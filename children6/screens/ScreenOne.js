@@ -19,8 +19,8 @@ class ScreenOne extends Component {
       <View style={styles.container}>
 
       
-        <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
-        <Image source={require('../static/Childrens-Advocacy-Center.jpg')} style={{marginTop: "50%", alignSelf: 'center' ,height: '20%', width: '62%'}}/>
+        <ImageBackground source={require('../static/greenfractal.jpg')} style={{width: '100%', height: '100%'}}>
+        <Image source={require('../static/Childrens-Advocacy-Center.png')} style={{marginTop: "50%", alignSelf: 'center' ,height: '30%', width: '64%'}}/>
         <TouchableHighlight
           onPress={() => navigate("ScreenTwo", {screen: "Screen Two"})}
           style={styles.button}>

@@ -6,7 +6,8 @@ import {
   TouchableHighlight,
   Constants,
   ImageBackground,
-  Image
+  Image,
+  Linking
 } from 'react-native';
 
 class ScreenTwo extends Component {
@@ -22,7 +23,7 @@ class ScreenTwo extends Component {
         <ImageBackground source={require('../static/purplehex.jpg')} style={{ width: '100%', height: '100%' }}>
           <View style={styles.buttonContainer}>
             <TouchableHighlight
-              onPress={() => navigate("ParentScreen", { screen: "Parent Screen" })}
+              onPress={() =>{Linking.openURL("http://167.99.56.53/verify")}}
               style={[styles.button, { backgroundColor: '#c5d663' }]}>
               <Text style={styles.buttonText}>Parent</Text>
             </TouchableHighlight>

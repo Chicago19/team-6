@@ -6,7 +6,7 @@ class PDFview extends Component {
   render() {
     return (
       <div>
-       <iframe src="https://www.w3schools.com"></iframe>
+       <iframe src={this.props.url}></iframe>
      </div>
     );
   }

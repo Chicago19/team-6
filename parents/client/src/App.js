@@ -42,33 +42,38 @@ class App extends Component {
     return (
       <Router>
         <div id="navbar">
-          <ul id="navbar-list">
-            <li>
-              <Link to="/home">
-                <img
-                  id="nav-home"
-                  src="images/resized-logo.png"
-                  alt="Chicago Children's Advocacy Center"
-                  style={{ float: "left" }}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/documents">
-                External Resources
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/external">
-                Documents
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/survey">
-                Survey
-              </Link>
-            </li>
-          </ul>
+        {window.location.pathname != '/verify' ?
+        <ul id="navbar-list">
+          <li>
+            <Link to="/home">
+              <img
+                id="nav-home"
+                src="images/resized-logo.png"
+                alt="Chicago Children's Advocacy Center"
+                style={{ float: "left" }}
+              />
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/documents">
+              External Resources
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/external">
+              Documents
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/survey">
+              Survey
+            </Link>
+          </li>
+        </ul>
+        :
+        (<div />)
+      }
+
           {routes.map(({ path, component: C }) => (
             <Route path={path} component={C} />
           ))}

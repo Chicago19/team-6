@@ -9,7 +9,7 @@ import {
 
 class ParentScreen extends Component {
   static navigationOptions = {
-    title: "Welcome"
+    title: "Chicage Children's Advocacy Center"
   }
   render() {
     const { navigate } = this.props.navigation;

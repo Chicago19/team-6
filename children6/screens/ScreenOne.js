@@ -10,7 +10,7 @@ import {
 
 class ScreenOne extends Component {
   static navigationOptions = {
-    title: "Welcome"
+    title: "Chicage Children's Advocacy Center"
   };
   render() {
     const { navigate } = this.props.navigation;
@@ -18,8 +18,9 @@ class ScreenOne extends Component {
     return (
       <View style={styles.container}>
 
-        <Image source={require('../static/Childrens-Advocacy-Center.jpg')} style={{width: '10%', height: '10%', flex: 1}}/>
+      
         <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
+        <Image source={require('../static/Childrens-Advocacy-Center.jpg')} style={{marginTop: "50%", alignSelf: 'center' ,height: '20%', width: '62%'}}/>
         <TouchableHighlight
           onPress={() => navigate("ScreenTwo", {screen: "Screen Two"})}
           style={styles.button}>

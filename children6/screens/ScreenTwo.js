@@ -11,7 +11,7 @@ import {
 class ScreenTwo extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      title: `Welcome to ChicagoCAC`,
+      title: `Chicage Children's Advocacy Center`,
     }
   };
   render() {
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     borderRadius: 5,
-    height: 40,
+    height: "10%",
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',

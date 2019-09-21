@@ -38,7 +38,6 @@ class Survey extends Component {
   }
 
   render() {
-    console.log(this.state.surveys);
     return (
       <div className="App">
         <header className="App-header">

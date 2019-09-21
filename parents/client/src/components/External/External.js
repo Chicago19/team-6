@@ -17,7 +17,7 @@ class External extends Component {
           JSON.stringify(res);
           let resource = {
             id: res._id,
-            name: res.title,
+            title: res.title,
             url: res.URL
           };
           var joined = this.state.resources.concat(resource);

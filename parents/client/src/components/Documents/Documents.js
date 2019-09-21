@@ -17,7 +17,7 @@ class Documents extends Component {
           JSON.stringify(doc);
           let document = {
             id: doc.file_title,
-            name: doc.file_title,
+            title: doc.file_title,
             url: doc.file_URL
           };
           var joined = this.state.documents.concat(document);

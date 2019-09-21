@@ -1,30 +1,33 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Animated, Text, View, Alert, Button, ImageBackground, Image, TouchableWithoutFeedback } from 'react-native';
 
   const FadeInView = (props) => {
     const [fadeAnim] = useState(new Animated.Value(0))  // Initial value for opacity: 0
+=======
+import React, {Component, TouchableWithoutFeedback} from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import Child from "./child.js";
 
-    React.useEffect(() => {
-      Animated.timing(
-        fadeAnim,
-        {
-          toValue: 1,
-          duration: 1000,
-        }
-      ).start();
-    }, [])
+export default function App(){
+  return (
+    <View style={styles.container}>
+          <Child/>
+    </View>
+  );
+}
+>>>>>>> 717a9a713e7da4405ab106b143c477c421ae15fa
 
-    return (
-      <Animated.View                 // Special animatable View
-        style={{
-          ...props.style,
-          opacity: fadeAnim,         // Bind opacity to animated value
-        }}
-      >
-        {props.children}
-      </Animated.View>
-    );
+
+const styles = StyleSheet.create({
+  container: {
+    
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
+<<<<<<< HEAD
 
   // You can then use your `FadeInView` in place of a `View` in your components:
   export default () => {
@@ -84,3 +87,6 @@ import { Animated, Text, View, Alert, Button, ImageBackground, Image, TouchableW
   });
 
 }
+=======
+});
+>>>>>>> 717a9a713e7da4405ab106b143c477c421ae15fa

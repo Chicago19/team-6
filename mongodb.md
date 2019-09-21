@@ -11,10 +11,12 @@
         - `surveys`
             - `_id`
             - `URL`: string
+            - `title`: string
             - `created_at`: timestamp
         - `external`
             - `_id`
             - `URL`: string
+            - `title`: string
             - `created_at`: timestamp
 
 

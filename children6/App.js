@@ -1,19 +1,70 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Animated, Text, View, Button } from 'react-native';
 
-export default function App() {
+const FadeInView = (props) => {
+  const [fadeAnim] = useState(new Animated.Value(0))  // Initial value for opacity: 0
+
+  React.useEffect(() => {
+    Animated.timing(
+      fadeAnim,
+      {
+        toValue: 1,
+        duration: 1000,
+      }
+    ).start();
+  }, [])
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <Animated.View                 // Special animatable View
+      style={{
+        ...props.style,
+        opacity: fadeAnim,         // Bind opacity to animated value
+      }}
+    >
+      {props.children}
+    </Animated.View>
   );
 }
 
-const styles = StyleSheet.create({
+// You can then use your `FadeInView` in place of a `View` in your components:
+export default () => {
+  return (
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <FadeInView style={{width: 250, height: 50, backgroundColor: 'purple'}}>
+        <Button title="Parents" color="white"/>
+      </FadeInView>
+      <FadeInView style={{width: 250, height: 50, backgroundColor: 'white'}}>
+        <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
+      </FadeInView>
+      <FadeInView style={{width: 250, height: 50, backgroundColor: 'white'}}>
+        <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
+      </FadeInView>
+      <FadeInView style={{width: 250, height: 50, backgroundColor: 'purple'}}>
+        <Button title="Children" color="white"/>
+      </FadeInView>
+    </View>
+
+  )
+
+  const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: Constants.statusBarHeight,
+    marginHorizontal: 16,
+  },
+  title: {
+    textAlign: 'center',
+    marginVertical: 8,
+  },
+  fixToText: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
 });
+
+}

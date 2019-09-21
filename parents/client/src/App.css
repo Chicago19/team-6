@@ -22,6 +22,11 @@ li {
   vertical-align: middle;
 }
 
+ul.sidebar > li {
+  display: block !important;
+  vertical-align: middle;
+}
+
 a {
   text-decoration: none;
   outline: none;

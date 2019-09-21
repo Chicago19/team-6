@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import {Helmet} from 'react-helmet';
 
 class Home extends Component {
   state = {};
   render() {
     return (
       <div className="App">
+      <Helmet>
+        <style>{'body{background-color: white; }'}</style>
+        </Helmet>
         <header className="App-header">
           <p>Home COMPONENT</p>
           <a

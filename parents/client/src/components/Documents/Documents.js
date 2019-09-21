@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Sidebar from "../PrettySidebar/Sidebar";
 class Documents extends Component {
   constructor(props) {
     super(props);
@@ -31,8 +31,9 @@ class Documents extends Component {
   render() {
     return (
       <div className="App">
+      <Sidebar />
         <header className="App-header">
-          <p>DOCUMENTS COMPONENT</p>
+          <p>DOCUMENTS</p>
           <a
             className="App-link"
             href="https://reactjs.org"

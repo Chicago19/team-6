@@ -42,7 +42,7 @@ class Survey extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p className="Survey">SURVEY COMPONENT</p>
+          <p className="Survey">PATIENT SURVEY</p>
           <iframe
             height="100%"
             width="100%"

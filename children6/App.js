@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Animated, Text, View, Alert, Button, ImageBackground, Image } from 'react-native';
+import { Animated, Text, View, Alert, Button, ImageBackground, Image, TouchableWithoutFeedback } from 'react-native';
 
   const FadeInView = (props) => {
     const [fadeAnim] = useState(new Animated.Value(0))  // Initial value for opacity: 0
@@ -36,18 +36,22 @@ import { Animated, Text, View, Alert, Button, ImageBackground, Image } from 'rea
       </View>
       </View>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <FadeInView style={{width: 250, height: 40, backgroundColor: 'white'}}>
-            <Button title="Parents" color="black"/>
-          </FadeInView>
+
+          <TouchableWithoutFeedback>
+            <Text onPress={() => Alert.alert('Go to parent page')} style={{color: 'white', fontSize: 48 }}>Parents</Text>
+          </TouchableWithoutFeedback>
+
           <FadeInView style={{width: 250, height: 50}}>
             <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
           </FadeInView>
           <FadeInView style={{width: 250, height: 50}}>
             <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
           </FadeInView>
-          <FadeInView style={{width: 250, height: 40, backgroundColor: 'white'}}>
-            <Button title="Children" color="black" onPress={() => Alert.alert('Go to child page')}/>
-          </FadeInView>
+
+          <TouchableWithoutFeedback>
+            <Text onPress={() => Alert.alert('Go to child page')} style={{color: 'white', fontSize: 48 }}>Children</Text>
+          </TouchableWithoutFeedback>
+
         </View>
       </ImageBackground>
 

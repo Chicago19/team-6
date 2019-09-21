@@ -20,19 +20,123 @@ class ScreenThree extends Component {
       apps: [
         {
           id: 1,
-          name: "Baby Drums"
+          name: "Baby Drums",
+          category: "kids",
+          url:
+            "https://apps.apple.com/us/app/babies-drums-kit-colorful/id782065988"
         },
         {
           id: 2,
-          name: "Bubble Paint Pop"
+          name: "Barbie",
+          category: "kids",
+          url:
+            "https://apps.apple.com/us/app/barbie-dreamhouse-adventures/id1296796112"
         },
         {
           id: 3,
-          name: "Can You Escape?"
+          name: "Bike Race",
+          category: "teens",
+          url:
+            "https://apps.apple.com/us/app/bike-race-free-style-games/id510461758"
         },
         {
           id: 4,
-          name: "Doc McStuffins Baby"
+          name: "Bubble Paint Pop",
+          category: "kids",
+          url: "https://apps.apple.com/us/app/baby-bubble-pop/id1143962054"
+        },
+        {
+          id: 5,
+          name: "Coloring Book",
+          category: "kids",
+          url:
+            "https://apps.apple.com/us/app/coloring-book-for-fun/id1456652693"
+        },
+        {
+          id: 6,
+          name: "Doc McStuffins Baby Nursery",
+          category: "kids",
+          url:
+            "https://apps.apple.com/us/app/doc-mcstuffins-baby-nursery/id1187114038"
+        },
+        {
+          id: 7,
+          name: "Elmo ABCs Lite",
+          category: "kids",
+          url: "https://apps.apple.com/us/app/elmo-loves-abcs-lite/id427847605"
+        },
+        {
+          id: 8,
+          name: "Flow Free",
+          category: "teens",
+          url: "https://apps.apple.com/us/app/flow-free/id526641427"
+        },
+        {
+          id: 9,
+          name: "Glow Lamp",
+          category: "relax",
+          url: "https://apps.apple.com/us/app/glow-lamp/id967821302"
+        },
+        {
+          id: 10,
+          name: "Go Particles",
+          category: "relax",
+          url: "https://apps.apple.com/us/app/go-particles/id1010351471"
+        },
+        {
+          id: 11,
+          name: "Hangman",
+          category: "teens",
+          url: "https://apps.apple.com/us/app/hangman/id327449554"
+        },
+        {
+          id: 12,
+          name: "Helix Jump",
+          category: "teens",
+          url: "https://apps.apple.com/us/app/helix-jump/id1345968745"
+        },
+        {
+          id: 13,
+          name: "Magic Fingers",
+          category: "relax",
+          url: "https://apps.apple.com/us/app/magic-fingers-lite/id498870471"
+        },
+        {
+          id: 14,
+          name: "Nail Salon",
+          category: "teens",
+          url: ""
+        },
+        {
+          id: 15,
+          name: "Relax Melodies",
+          category: "relax",
+          url:
+            "https://apps.apple.com/us/app/relax-melodies-sleep-sounds/id314498713"
+        },
+        {
+          id: 16,
+          name: "Sonic Dash",
+          category: "teens",
+          url: ""
+        },
+        {
+          id: 17,
+          name: "Subway Surfer",
+          category: "teens",
+          url: ""
+        },
+        {
+          id: 18,
+          name: "TicTacToe",
+          category: "teens",
+          url: ""
+        },
+        {
+          id: 19,
+          name: "Word Search",
+          category: "teens",
+          url: ""
         }
       ]
     };
@@ -60,6 +164,7 @@ class ScreenThree extends Component {
             {this.state.apps.map(app => {
               return (
                 <TouchableHighlight
+                  key={app.key}
                   style={styles.button}
                   onPress={this.handlePress}
                 >

@@ -1,7 +1,33 @@
 import React, { Component } from "react";
 
 class Documents extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      documents: []
+    };
+  }
+
+  async componentDidMount() {
+    await fetch("/api/get-documents")
+      .then(response => response.json())
+      .then(json =>
+        json.forEach(doc => {
+          JSON.stringify(doc);
+          let document = {
+            id: doc.file_title,
+            name: doc.file_title,
+            url: doc.file_URL
+          };
+          var joined = this.state.documents.concat(document);
+          this.setState({
+            documents: joined
+          });
+        })
+      );
+  }
+
   render() {
     return (
       <div className="App">

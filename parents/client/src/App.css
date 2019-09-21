@@ -1,14 +1,17 @@
 #navbar-list {
   padding: 10px 0px;
-  background-color: #ded4e7;
+  /* background-color: #b04891; */
+  background-image: url('./186774.jpg');
 }
 
 #nav-home {
   padding-left: 10px;
+  float: middle;
 }
 
 .nav-link {
-  margin-left: 20px;
+  margin-left: 200px;
+  vertical-align: middle;
 }
 
 ul {

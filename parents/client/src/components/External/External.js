@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./External.css";
 class External extends Component {
   constructor(props) {
     super(props);

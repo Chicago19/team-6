@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Survey.css";
 
 class Survey extends Component {
   constructor(props) {

@@ -1,3 +1,7 @@
+#resources-container {
+  display: inline-flex;
+}
+
 #resources-sidebar {
   li {
     color: black;
@@ -5,18 +9,17 @@
   }
   text-align: center;
   cursor: pointer;
-  width: 20%;
+  width: 30%;
 }
 
 #header {
-  width: 20%;
   padding-left: 5px;
 }
 
 .pdf-viewer{
   iframe {
-    width: 80%;
+    width: 95%;
     float: right;
-    height: 850px;
+    height: 950px;
   }
 }

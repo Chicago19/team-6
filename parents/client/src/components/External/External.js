@@ -48,8 +48,8 @@ class External extends Component {
     });
     return (
       <div id="resources-container">
-          <h2 id="header"> Select pdf below </h2>
       <div id="resources-sidebar">
+        <h2 id="header"> Select a PDF </h2>
         <ul>
           {resources}
         </ul>

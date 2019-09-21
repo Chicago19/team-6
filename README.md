@@ -12,6 +12,6 @@ Our project run using React.JS for the front-end and Express.JS for the backend.
 
 Then, `cd` into the `parents` folder and run `npm run dev`.
 
-##Troubleshooting
+## Troubleshooting
 
 If you have any dependency errors, try removing `node_modules` with `rm -rf node_modules` and reinstall dependencies using `npm install`.

@@ -39,9 +39,9 @@ class Survey extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p className="Survey">PATIENT SURVEY</p>
+      <div id="survey">
+        <header id="survey-header">
+          <p id="survey-title">PATIENT SURVEY</p>
           <iframe
             height="100%"
             width="100%"

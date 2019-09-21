@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
+
 import "./Documents.css";
-=======
+
 import "./Documents.scss";
->>>>>>> 85ffda4c335a26aec4e51dff80e2f193ad2fb121
+
 
 class Documents extends Component {
   constructor(props) {

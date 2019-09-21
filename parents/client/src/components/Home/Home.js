@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
 import "./Home.css";
-=======
+
 import "./Home.scss";
->>>>>>> 85ffda4c335a26aec4e51dff80e2f193ad2fb121
 
 class Home extends Component {
   state = {};

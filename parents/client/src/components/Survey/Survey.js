@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
+
 import "./Survey.css";
-=======
+
 import "./Survey.scss";
->>>>>>> 85ffda4c335a26aec4e51dff80e2f193ad2fb121
 
 class Survey extends Component {
   constructor(props) {

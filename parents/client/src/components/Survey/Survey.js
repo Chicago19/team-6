@@ -1,8 +1,34 @@
 import React, { Component } from "react";
 
 class Survey extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      surveys: []
+    };
+  }
+  async componentDidMount() {
+    await fetch("/api/get-surveys")
+      .then(response => response.json())
+      .then(json =>
+        json.forEach(sur => {
+          JSON.stringify(sur);
+          let survey = {
+            id: sur._id,
+            title: sur.title,
+            url: sur.URL
+          };
+          var joined = this.state.surveys.concat(survey);
+          this.setState({
+            surveys: joined
+          });
+        })
+      );
+  }
+
   render() {
+    console.log(this.state.surveys);
     return (
       <div className="App">
         <header className="App-header">

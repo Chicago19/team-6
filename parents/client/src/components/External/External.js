@@ -1,7 +1,33 @@
 import React, { Component } from "react";
 
 class External extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      resources: []
+    };
+  }
+
+  async componentDidMount() {
+    await fetch("/api/get-external-resources")
+      .then(response => response.json())
+      .then(json =>
+        json.forEach(res => {
+          JSON.stringify(res);
+          let resource = {
+            id: res._id,
+            title: res.title,
+            url: res.URL
+          };
+          var joined = this.state.resources.concat(resource);
+          this.setState({
+            resources: joined
+          });
+        })
+      );
+  }
+
   render() {
     return (
       <div className="App">

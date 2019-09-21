@@ -49,7 +49,7 @@ class External extends Component {
     return (
       <div id="resources-container">
       <div id="resources-sidebar">
-        <h2 id="header"> Select a PDF </h2>
+        <h2 id="header"> Select a Link </h2>
         <ul>
           {resources}
         </ul>

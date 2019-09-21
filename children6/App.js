@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Animated, Text, View, Alert, Button } from 'react-native';
+import { Animated, Text, View, Alert, Button, ImageBackground } from 'react-native';
 
 const FadeInView = (props) => {
   const [fadeAnim] = useState(new Animated.Value(0))  // Initial value for opacity: 0
@@ -29,20 +29,23 @@ const FadeInView = (props) => {
 // You can then use your `FadeInView` in place of a `View` in your components:
 export default () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "black"}}>
-      <FadeInView style={{width: 250, height: 50, backgroundColor: '#865ab0'}}>
-        <Button title="Parents" color="white"/>
-      </FadeInView>
-      <FadeInView style={{width: 250, height: 50, backgroundColor: 'black'}}>
-        <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
-      </FadeInView>
-      <FadeInView style={{width: 250, height: 50, backgroundColor: 'black'}}>
-        <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
-      </FadeInView>
-      <FadeInView style={{width: 250, height: 50, backgroundColor: '#865ab0'}}>
-        <Button title="Children" color="white" onPress={() => Alert.alert('Go to child page')}/>
-      </FadeInView>
-    </View>
+    <ImageBackground source={require('../children6/blackwood.jpg')} style={{width: '100%', height: '100%'}}>
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <FadeInView style={{width: 250, height: 50, backgroundColor: '#865ab0'}}>
+          <Button title="Parents" color="white"/>
+        </FadeInView>
+        <FadeInView style={{width: 250, height: 50}}>
+          <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
+        </FadeInView>
+        <FadeInView style={{width: 250, height: 50}}>
+          <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
+        </FadeInView>
+        <FadeInView style={{width: 250, height: 50, backgroundColor: '#865ab0'}}>
+          <Button title="Children" color="white" onPress={() => Alert.alert('Go to child page')}/>
+        </FadeInView>
+      </View>
+    </ImageBackground>
+
 
   )
 

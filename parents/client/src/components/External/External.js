@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./External.scss";
 
 class External extends Component {
   constructor(props) {

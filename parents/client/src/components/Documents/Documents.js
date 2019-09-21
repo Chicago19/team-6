@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import "./Documents.scss";
 
 class Documents extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       documents: []
     };
@@ -29,19 +29,18 @@ class Documents extends Component {
   }
 
   render() {
+    const docs = this.state.documents.map(function(document){
+      return <li> {document.title} </li>;
+    });
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>DOCUMENTS COMPONENT</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="documents-container">
+      <div id="documents-sidebar">
+        <ul>
+          {docs}
+        </ul>
+      </div>
+      <div id="pdf-viewer">
+      </div>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Survey.scss";
 
 class Survey extends Component {
   constructor(props) {

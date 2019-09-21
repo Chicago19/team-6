@@ -1,20 +1,17 @@
-import React, {Component, TouchableWithoutFeedback} from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import Child from "./child.js";
+import React from 'react';
 
-export default function App(){
-  return (
-    <View style={styles.container}>
-          <Child/>
-    </View>
-  );
-}
+import { createStackNavigator } from 'react-navigation-stack';
+import {createAppContainer } from 'react-navigation';
+import ScreenOne from './screens/ScreenOne';
+import ScreenTwo from './screens/ScreenTwo';
+import ScreenThree from './screens/ScreenThree';
+import ScreenFour from './screens/ScreenFour';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});
+const App = createStackNavigator({
+    ScreenOne: { screen: ScreenOne},
+    ScreenTwo: { screen: ScreenTwo},
+    ScreenThree: {screen: ScreenThree},
+    ScreenFour: {screen: ScreenFour},
+})
+
+export default createAppContainer(App);

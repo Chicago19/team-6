@@ -24,6 +24,7 @@ li {
 
 a {
   text-decoration: none;
+  outline: none;
   color: #936fb1;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }

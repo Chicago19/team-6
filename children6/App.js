@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Animated, Text, View, Alert, Button, ImageBackground } from 'react-native';
+import { Animated, Text, View, Alert, Button, ImageBackground, Image } from 'react-native';
 
   const FadeInView = (props) => {
     const [fadeAnim] = useState(new Animated.Value(0))  // Initial value for opacity: 0
@@ -32,7 +32,7 @@ import { Animated, Text, View, Alert, Button, ImageBackground } from 'react-nati
       <ImageBackground source={require('../children6/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <View style={{width: 300, height: 50, backgroundColor: 'white'}}>
-           <Image source={require('../static/ccaclogo.jpg')} style={styles.image}/>
+           <Image source={require('../children6/ccaclogo.jpg')} style={{width: '100%', height: '300%'}}/>
       </View>
       </View>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

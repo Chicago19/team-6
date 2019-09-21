@@ -2,7 +2,16 @@
   li {
     display: block;
   }
+
   text-align: center;
   cursor: pointer;
   width: 20%;
+}
+
+.pdf-viewer{
+  iframe {
+    width: 80%;
+    float: right;
+    height: 850px;
+  }
 }

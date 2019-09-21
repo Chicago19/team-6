@@ -53,9 +53,9 @@ class External extends Component {
           {resources}
         </ul>
       </div>
-      <div id="pdf-viewer">
-      </div>
+      <div className="pdf-viewer">
         {this.state.show_res ? (<PDFview url={this.state.res_url} />) : (<div />)}
+      </div>
       </div>
     );
   }

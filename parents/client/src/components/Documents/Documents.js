@@ -54,9 +54,9 @@ class Documents extends Component {
           {docs}
         </ul>
       </div>
-      <div id="pdf-viewer">
-      </div>
+      <div className="pdf-viewer">
         {this.state.show_pdf ? (<PDFview url={this.state.pdf_url} />) : (<div />)}
+      </div>
       </div>
     );
   }

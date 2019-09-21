@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
-import "./Documents.css";
-
+import PDFview from "../PDFview/PDFview"
 import "./Documents.scss";
 
 
@@ -13,6 +11,7 @@ class Documents extends Component {
       show_pdf: false,
       pdf_url: "",
     };
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   async componentDidMount() {
@@ -34,10 +33,20 @@ class Documents extends Component {
       );
   }
 
+  handleOnClick(url){
+    this.setState({
+      show_pdf : true,
+      pdf_url: url,
+     });
+  }
+
   render() {
-    const docs = this.state.documents.map(function(document){
-      return <li className="document-titles" onClick={this.setState({show_pdf : true, pdf_url: document.url});}> {document.title} </li>;
+    const docs = this.state.documents.map((document) => {
+      return <li className="document-titles" onClick={() => this.handleOnClick(document.url)}>
+      {document.title}
+       </li>;
     });
+
     return (
       <div id="documents-container">
       <div id="documents-sidebar">
@@ -47,6 +56,7 @@ class Documents extends Component {
       </div>
       <div id="pdf-viewer">
       </div>
+        {this.state.show_pdf ? (<PDFview url={this.state.pdf_url} />) : (<div />)}
       </div>
     );
   }

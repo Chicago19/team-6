@@ -18,22 +18,20 @@ class ScreenTwo extends Component {
     const { state, navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-      <View style={styles.buttonContainer}>
-        <Text style={styles.titleText}>Please Select One</Text>
-        <TouchableHighlight
-          onPress={() => navigate("ParentScreen", { screen: "Parent Screen" })}
-          style={[styles.button, { backgroundColor: '#c5d663' }]}>
-            <Text style={styles.buttonText}>Parent</Text>
-        </TouchableHighlight>
-      </View>
-
-      <View style={styles.buttonContainer}>
-        <TouchableHighlight
-          onPress={() => navigate("ChildScreen", { screen: "Child Screen" })}
-          style={[styles.button, { backgroundColor: '#c5d663' }]}>
-          <Text style={styles.buttonText}>Child</Text>
-        </TouchableHighlight>
-      </View>
+        <ImageBackground source={require('../static/purplehex.jpg')} style={{ width: '100%', height: '100%' }}>
+          <View style={styles.buttonContainer}>
+            <TouchableHighlight
+              onPress={() => navigate("ParentScreen", { screen: "Parent Screen" })}
+              style={[styles.button, { backgroundColor: '#c5d663' }]}>
+              <Text style={styles.buttonText}>Parent</Text>
+            </TouchableHighlight>
+            <TouchableHighlight
+              onPress={() => navigate("ChildScreen", { screen: "Child Screen" })}
+              style={[styles.button, { backgroundColor: '#c5d663' }]}>
+              <Text style={styles.buttonText}>Child</Text>
+            </TouchableHighlight>
+          </View>
+        </ImageBackground>
       </View>
     );
   }

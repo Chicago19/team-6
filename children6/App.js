@@ -32,7 +32,7 @@ import { Animated, Text, View, Alert, Button, ImageBackground } from 'react-nati
       <ImageBackground source={require('../children6/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <View style={{width: 300, height: 50, backgroundColor: 'white'}}>
-        <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}>Child Abuse Center</Text>
+           <Image source={require('../static/ccaclogo.jpg')} style={styles.image}/>
       </View>
       </View>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -73,6 +73,10 @@ import { Animated, Text, View, Alert, Button, ImageBackground } from 'react-nati
       borderBottomColor: '#737373',
       borderBottomWidth: StyleSheet.hairlineWidth,
     },
+    image: {
+      width: Dimensions.get('window').width,
+      height: Dimensions.get('window').height
+    }
   });
 
 }

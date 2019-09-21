@@ -36,7 +36,52 @@ class App extends Component {
     this.state = {
       data: ""
     };
+    this.events = [
+      "load",
+      "mousemove",
+      "mousedown",
+      "click",
+      "scroll",
+      "keypress"
+    ];
+    this.warn = this.warn.bind(this);
+    this.logout = this.logout.bind(this);
+    this.resetTimeout = this.resetTimeout.bind(this);
+
+    this.setTimeout();
   }
+
+  componentWillMount() {
+    this.events.forEach((event) => {
+       window.addEventListener(event, this.resetTimeout);
+     });
+     this.setTimeout();
+  }
+
+ clearTimeout() {
+   if (this.warnTimeout) clearTimeout(this.warnTimeout);
+
+   if (this.logoutTimeout) clearTimeout(this.logoutTimeout);
+ }
+
+ setTimeout() {
+   this.warnTimeout = setTimeout(this.warn, 45 * 1000);
+
+   this.logoutTimeout = setTimeout(this.logout, 70 * 1000);
+ }
+
+ resetTimeout() {
+   this.clearTimeout();
+   this.setTimeout();
+ }
+
+ warn() {
+   alert("You will be logged out automatically in 1 minute.");
+ }
+
+ logout() {
+   window.location.href="/verify"
+ }
 
   render() {
     return (

@@ -55,12 +55,12 @@ class App extends Component {
             </li>
             <li>
               <Link className="nav-link" to="/documents">
-                Documents
+                External Resources
               </Link>
             </li>
             <li>
               <Link className="nav-link" to="/external">
-                External Resources
+                Documents
               </Link>
             </li>
             <li>

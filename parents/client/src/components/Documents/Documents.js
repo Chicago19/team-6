@@ -50,6 +50,7 @@ class Documents extends Component {
     return (
       <div id="documents-container">
       <div id="documents-sidebar">
+      <h2 id="header"> Select PDF Below </h2>
         <ul>
           {docs}
         </ul>

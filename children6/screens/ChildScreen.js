@@ -9,6 +9,7 @@ import {
   ImageBackground,
   Button
 } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 class ScreenThree extends Component {
   constructor(props) {
@@ -142,7 +143,7 @@ class ScreenThree extends Component {
     };
   }
   static navigationOptions = ({ navigation }) => ({
-    title: `Welcome ${navigation.state.params.screen}`
+    title: `Chicage Children's Advocacy Center`
   });
 
   handlePress() {
@@ -153,7 +154,7 @@ class ScreenThree extends Component {
   render() {
     const { params } = this.props.navigation.state;
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <ImageBackground
           source={require("../static/purplehex.jpg")}
           style={{ width: "100%", height: "100%" }}
@@ -179,11 +180,8 @@ class ScreenThree extends Component {
           >
             <Text style={styles.buttonText}>Go Back</Text>
           </TouchableHighlight>
-          <TouchableHighlight style={styles.button} onPress={() => openApp()}>
-            <Text style={styles.buttonText}>Go Back</Text>
-          </TouchableHighlight>
         </ImageBackground>
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -194,9 +192,9 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center"
+    //flexDirection: "row",
+   // alignItems: "center",
+   // justifyContent: "center"
   },
   titleText: {
     fontSize: 22
@@ -207,7 +205,7 @@ const styles = StyleSheet.create({
     marginLeft: 25,
     marginTop: 20,
     borderRadius: 20,
-    backgroundColor: "#C56EE0",
+    backgroundColor: "#c5d663",
     height: 50,
     justifyContent: "center",
     alignItems: "center",

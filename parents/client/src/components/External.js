@@ -6,9 +6,7 @@ class External extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          <p>EXTERNAL RESOURCES COMPONENT</p>
           <a
             className="App-link"
             href="https://reactjs.org"

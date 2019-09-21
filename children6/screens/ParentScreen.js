@@ -6,7 +6,7 @@ import {
   TouchableHighlight
 } from 'react-native';
 
-class ScreenFour extends Component {
+class ParentScreen extends Component {
   static navigationOptions = {
     title: "Welcome"
   }
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   }
 });
-export default ScreenFour;
+export default ParentScreen;

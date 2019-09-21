@@ -20,13 +20,13 @@ class ScreenTwo extends Component {
 
         <View style={styles.buttonContainer}>
           <TouchableHighlight
-            onPress={() => navigate("ScreenFour", { screen: "Screen Four" })}
+            onPress={() => navigate("ParentScreen", { screen: "Parent Screen" })}
             style={[styles.button, {backgroundColor: '#C56EE0'}]}>
             <Text style={styles.buttonText}>Parent</Text>
           </TouchableHighlight>
 
           <TouchableHighlight
-            onPress={() => navigate("ScreenThree", { screen: "Screen Three" })}
+            onPress={() => navigate("ChildScreen", { screen: "Child Screen" })}
             style={[styles.button, {backgroundColor: '#8E84FB'}]}>
             <Text style={styles.buttonText}>Child</Text>
           </TouchableHighlight>

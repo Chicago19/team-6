@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Documents from "./components/Documents";
 import External from "./components/External";
@@ -37,19 +36,23 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <ul>
+        <div id="navbar">
+          <ul id="navbar-list">
             <li>
-              <Link to="/documents">Documents</Link>
+              <Link to="/">
+                <img id="nav-home" src="images/resized-logo.png" alt="Chicago Children's Advocacy Center" style={{ float: 'left' }} />
+              </Link>
             </li>
             <li>
-              <Link to="/external">External Resources</Link>
+              <Link className="nav-link" to="/documents">Documents</Link>
             </li>
             <li>
-              <Link to="/survey">Survey</Link>
+              <Link className="nav-link" to="/external">External Resources</Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/survey">Survey</Link>
             </li>
           </ul>
-          <hr />
           {routes.map(({ path, component: C }) => (
             <Route path={path} component={C} />
           ))}

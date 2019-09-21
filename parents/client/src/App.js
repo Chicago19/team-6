@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import "./App.css";
-import Documents from "./components/Documents";
-import External from "./components/External";
-import Survey from "./components/Survey";
+import Documents from "./components/Documents/Documents";
+import External from "./components/External/External";
+import Home from "./components/Home/Home"
+import Survey from "./components/Survey/Survey";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const routes = [
+  {
+    path: "/home",
+    component: Home
+  },
   {
     path: "/documents",
     component: Documents
@@ -39,7 +44,7 @@ class App extends Component {
         <div id="navbar">
           <ul id="navbar-list">
             <li>
-              <Link to="/">
+              <Link to="/home">
                 <img id="nav-home" src="images/resized-logo.png" alt="Chicago Children's Advocacy Center" style={{ float: 'left' }} />
               </Link>
             </li>

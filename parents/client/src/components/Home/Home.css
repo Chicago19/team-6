@@ -43,7 +43,7 @@ body {
    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
   transform: translateZ(-1px) scale(1.5);
   /* Force the background image to fill the whole element. */
-  background-size: 110%;
+  background-size: 285%;
   /* Keep the image from overlapping sibling elements. */
   z-index: -1;
 }
@@ -71,4 +71,5 @@ h1{
   font-size: 2rem;
   font-weight: 400;
   text-shadow: 0px 2px 3px #333;
+  text-align: center;
 }

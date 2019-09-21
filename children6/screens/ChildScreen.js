@@ -1,17 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Linking } from "react-native";
+
 import {
   StyleSheet,
   View,
   Text,
   TouchableHighlight,
   Linking,
-  ImageBackground
+  ImageBackground,
+  Button
 } from 'react-native';
 
 class ScreenThree extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handlePress = this.handlePress.bind(this);
+  }
   static navigationOptions = ({ navigation }) => ({
     title: `Welcome ${navigation.state.params.screen}`
   });
+
+  handlePress() {
+    Linking.openURL("https://apps.apple.com");
+    this.props.onPress && this.props.onPress();
+  }
 
   render() {
     const { params } = this.props.navigation.state;
@@ -19,10 +32,13 @@ class ScreenThree extends Component {
       <View style={styles.container}>
         <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
         <Text style={styles.titleText}>{params.screen}</Text>
-        
+        <TouchableHighlight style={styles.button} onPress={this.handlePress}>
+          <Text style={styles.buttonText}>Play Games</Text>
+        </TouchableHighlight>
         <TouchableHighlight
           style={styles.button}
-          onPress={() => this.props.navigation.goBack()}>
+          onPress={() => this.props.navigation.goBack()}
+        >
           <Text style={styles.buttonText}>Go Back</Text>
         </TouchableHighlight>
         <TouchableHighlight
@@ -40,29 +56,29 @@ class ScreenThree extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   titleText: {
     fontSize: 22
   },
   button: {
-    alignSelf: 'stretch',
+    alignSelf: "stretch",
     marginRight: 25,
     marginLeft: 25,
     marginTop: 20,
     borderRadius: 20,
-    backgroundColor: '#C56EE0',
+    backgroundColor: "#C56EE0",
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
   },
   buttonText: {
-    color: 'white',
+    color: "white",
     fontSize: 18,
-    alignSelf: 'center'
+    alignSelf: "center"
   }
-})
+});
 
 export default ScreenThree;

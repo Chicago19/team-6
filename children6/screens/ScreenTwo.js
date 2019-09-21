@@ -3,7 +3,7 @@ import {
   StyleSheet,
   View,
   Text,
-  TouchableHighlight, 
+  TouchableHighlight,
   Constants,
   ImageBackground
 } from 'react-native';
@@ -18,21 +18,22 @@ class ScreenTwo extends Component {
     const { state, navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
-        <View style={styles.buttonContainer}>
+      <View style={styles.buttonContainer}>
         <Text style={styles.titleText}>Please Select One</Text>
-          <TouchableHighlight
-            onPress={() => navigate("ParentScreen", { screen: "Parent Screen" })}
-            style={[styles.button, {backgroundColor: '#c5d663'}]}>
-          </TouchableHighlight>
+        <TouchableHighlight
+          onPress={() => navigate("ParentScreen", { screen: "Parent Screen" })}
+          style={[styles.button, { backgroundColor: '#c5d663' }]}>
+            <Text style={styles.buttonText}>Parent</Text>
+        </TouchableHighlight>
+      </View>
 
-          <TouchableHighlight
-            onPress={() => navigate("ChildScreen", { screen: "Child Screen" })}
-            style={[styles.button, {backgroundColor: '#c5d663'}]}>
-            <Text style={styles.buttonText}>Child</Text>
-          </TouchableHighlight>
-        </View>
-        </ImageBackground>
+      <View style={styles.buttonContainer}>
+        <TouchableHighlight
+          onPress={() => navigate("ChildScreen", { screen: "Child Screen" })}
+          style={[styles.button, { backgroundColor: '#c5d663' }]}>
+          <Text style={styles.buttonText}>Child</Text>
+        </TouchableHighlight>
+      </View>
       </View>
     );
   }
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   buttonContainer: {
-    flex:2,
+    flex: 2,
     flexDirection: 'row',
     marginLeft: 20,
     marginRight: 20,
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   button: {
-    flex:2,
+    flex: 2,
     marginLeft: 10,
     marginRight: 10,
     borderRadius: 5,

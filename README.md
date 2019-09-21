@@ -4,10 +4,11 @@
 
 Our project run using React.JS for the front-end and Express.JS for the backend. To get it running, install the following:
 
-1. npm/npx
-2. nodemon
-3. react-scripts
-4. concurrently
+1. npm/npx (npx comes with npm)
+2. nodemon; `npm install --save-dev nodemon`
+3. react-scripts; `npm i react-scripts`
+4. react-dom; `npm install react react-dom --save`
+4. concurrently; `npm i concurrently`
 
 Then, `cd` into the `parents` folder and run `npm run dev`.
 

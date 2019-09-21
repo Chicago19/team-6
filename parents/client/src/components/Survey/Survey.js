@@ -8,6 +8,8 @@ class Survey extends Component {
     this.state = {
       surveys: []
     };
+
+    this.getStyles = this.getStyles.bind(this);
   }
   async componentDidMount() {
     await fetch("/api/get-surveys")
@@ -28,20 +30,24 @@ class Survey extends Component {
       );
   }
 
+  getStyles() {
+    const styles = {
+      height: 200
+    };
+    return styles;
+  }
+
   render() {
     console.log(this.state.surveys);
     return (
       <div className="App">
         <header className="App-header">
           <p>SURVEY COMPONENT</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <iframe
+            height="100%"
+            width="100%"
+            src="http://umich.qualtrics.com/jfe/form/SV_9zV7LyXO3OhaiaN?Q_JFE=qdg"
+          ></iframe>
         </header>
       </div>
     );

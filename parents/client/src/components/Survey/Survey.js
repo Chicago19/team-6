@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import "./Survey.css";
+
 import "./Survey.scss";
 
 class Survey extends Component {

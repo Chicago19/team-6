@@ -5,3 +5,6 @@
         - `resources` (just pdfs)
         - `surveys`
         - `external`
+
+
+## How to query

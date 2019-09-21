@@ -4,6 +4,7 @@ import Documents from "./components/Documents/Documents";
 import External from "./components/External/External";
 import Home from "./components/Home/Home"
 import Survey from "./components/Survey/Survey";
+import Verify from "./components/Verify/Verify";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const routes = [
@@ -22,6 +23,10 @@ const routes = [
   {
     path: "/survey",
     component: Survey
+  },
+  {
+    path: "/verify",
+    component: Verify
   }
 ];
 

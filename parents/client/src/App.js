@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Documents from "./components/Documents/Documents";
 import External from "./components/External/External";
-import Home from "./components/Home/Home"
+import Home from "./components/Home/Home";
 import Survey from "./components/Survey/Survey";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -32,11 +32,6 @@ class App extends Component {
       data: ""
     };
   }
-  componentDidMount() {
-    fetch("/api/boilerplate")
-      .then(res => res.json())
-      .then(data => this.setState({ data: data }));
-  }
 
   render() {
     return (
@@ -45,17 +40,28 @@ class App extends Component {
           <ul id="navbar-list">
             <li>
               <Link to="/home">
-                <img id="nav-home" src="images/resized-logo.png" alt="Chicago Children's Advocacy Center" style={{ float: 'left' }} />
+                <img
+                  id="nav-home"
+                  src="images/resized-logo.png"
+                  alt="Chicago Children's Advocacy Center"
+                  style={{ float: "left" }}
+                />
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/documents">Documents</Link>
+              <Link className="nav-link" to="/documents">
+                Documents
+              </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/external">External Resources</Link>
+              <Link className="nav-link" to="/external">
+                External Resources
+              </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/survey">Survey</Link>
+              <Link className="nav-link" to="/survey">
+                Survey
+              </Link>
             </li>
           </ul>
           {routes.map(({ path, component: C }) => (

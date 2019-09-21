@@ -8,7 +8,7 @@ var MongoClient = require("mongodb").MongoClient;
 const app = express();
 
 //GET DOCUMENTS
-app.get("/get-documents", function(req, res) {
+app.get("/api/get-documents", function(req, res) {
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("parent-resources");
@@ -25,7 +25,7 @@ app.get("/get-documents", function(req, res) {
 });
 
 //GET SURVEYS
-app.get("/get-surveys", function(req, res) {
+app.get("/api/get-surveys", function(req, res) {
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("parent-resources");
@@ -42,7 +42,7 @@ app.get("/get-surveys", function(req, res) {
 });
 
 //GET EXTERNAL
-app.get("/get-external-resources", function(req, res) {
+app.get("/api/get-external-resources", function(req, res) {
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("parent-resources");

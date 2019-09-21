@@ -17,6 +17,8 @@ class ScreenThree extends Component {
 
     this.handlePress = this.handlePress.bind(this);
 
+    const pre = "itms-app://";
+
     this.state = {
       apps: [
         {
@@ -37,8 +39,7 @@ class ScreenThree extends Component {
           id: 3,
           name: "Bike Race",
           category: "teens",
-          url:
-            "https://apps.apple.com/us/app/bike-race-free-style-games/id510461758"
+          url: `https://apps.apple.com/us/app/bike-race-free-style-games/id510461758`
         },
         {
           id: 4,
@@ -129,12 +130,6 @@ class ScreenThree extends Component {
         },
         {
           id: 18,
-          name: "TicTacToe",
-          category: "teens",
-          url: ""
-        },
-        {
-          id: 19,
           name: "Word Search",
           category: "teens",
           url: "https://apps.apple.com/us/app/word-search/id1357802596"
@@ -146,10 +141,7 @@ class ScreenThree extends Component {
     title: `Chicage Children's Advocacy Center`
   });
 
-  handlePress() {
-    Linking.openURL("https://apps.apple.com");
-    this.props.onPress && this.props.onPress();
-  }
+  handlePress(app) {}
 
   render() {
     const { params } = this.props.navigation.state;
@@ -159,6 +151,7 @@ class ScreenThree extends Component {
           source={require("../static/purplehex.jpg")}
           style={{ width: "100%", height: "100%" }}
         >
+          <Text style={styles.titleText}>{params.screen}</Text>
 
           <View>
             {this.state.apps.map(app => {
@@ -166,7 +159,10 @@ class ScreenThree extends Component {
                 <TouchableHighlight
                   key={app.key}
                   style={styles.button}
-                  onPress={this.handlePress}
+                  onPress={() => {
+                    Linking.openURL(app.url);
+                    this.props.onPress && this.props.onPress();
+                  }}
                 >
                   <Text style={styles.buttonText}>{app.name}</Text>
                 </TouchableHighlight>
@@ -190,10 +186,10 @@ const styles = StyleSheet.create({
     flex: 1
   },
   container: {
-    flex: 1,
+    flex: 1
     //flexDirection: "row",
-   // alignItems: "center",
-   // justifyContent: "center"
+    // alignItems: "center",
+    // justifyContent: "center"
   },
   titleText: {
     fontSize: 22

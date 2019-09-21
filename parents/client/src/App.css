@@ -1,4 +1,4 @@
-#navbar {
+#navbar-list {
   padding: 10px 0px;
   background-color: #ded4e7;
 }
@@ -27,6 +27,7 @@ a {
   outline: none;
   color: #936fb1;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 17px;
 }
 
 .App-logo {

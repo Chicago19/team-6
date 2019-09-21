@@ -1,18 +1,23 @@
 #resources-container {
   display: inline-flex;
+  width: 100%;
 }
 
 #resources-sidebar {
   li {
     color: black;
     padding-top: 20px;
+    display: inherit;
   }
+  
   text-align: center;
   cursor: pointer;
   width: 30%;
 }
 
 .pdf-viewer{
+  flex-grow: 5;
+
   iframe {
     width: 95%;
     float: right;

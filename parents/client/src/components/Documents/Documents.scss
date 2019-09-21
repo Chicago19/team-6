@@ -5,8 +5,9 @@
 
 #documents-sidebar {
   li {
-    display: block;
+    color: black;
     padding-top: 20px;
+    display: inherit;
   }
 
   text-align: center;
@@ -18,14 +19,8 @@
   flex-grow: 5;
 
   iframe {
-    width: 100%;
+    width: 95%;
     float: right;
     height: 950px;
-  }
-
-  #header {
-    display: block;
-    padding-left: 200px;
-    padding-top: 20x;
   }
 }

@@ -5,7 +5,8 @@ import {
   Text,
   TouchableHighlight,
   Constants,
-  ImageBackground
+  ImageBackground,
+  Image
 } from 'react-native';
 
 class ScreenTwo extends Component {

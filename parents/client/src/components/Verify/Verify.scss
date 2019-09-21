@@ -2,7 +2,12 @@
   text-align: center;
 
   #pw-text {
-    margin-top: 60px;
-    font-size: 24px;
+    margin-top: 10%;
+    font-size: 30px;
+  }
+
+  #error-msg {
+    font-size: 20px;
+    color: red;
   }
 }

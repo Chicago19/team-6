@@ -16,7 +16,7 @@ class Verify extends Component {
     event.preventDefault();
     const { value } = this.state;
     if (value === 'JPMGC') {
-      window.location.href = "http://http://167.99.56.53/home"
+      window.location.href = "http://167.99.56.53/home"
     }
     else {
       document.getElementById("error-msg").innerHTML = "Password incorrect. Please try again."

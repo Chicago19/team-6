@@ -1,5 +1,9 @@
 # Code for Good - Team 6
 
+## Project requirements
+- MongoDB Cluster
+- AWS S3 bucket
+
 ## Set up the dev env locally
 
 Our project run using React.JS for the front-end, Express.JS for the backend, and MongoDB for our database. To get it running, run git clone on `https://github.com/Chicago19/team-6.git` and install the following:

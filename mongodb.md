@@ -3,8 +3,21 @@
 - database `parent-resources`
     - collections
         - `resources` (just pdfs)
+            - `_id`
+            - `file_title`: string
+            - `file_URL`: string
+            - `created_at`: timestamp
+            - `visible`: boolean
         - `surveys`
+            - `_id`
+            - `URL`: string
+            - `title`: string
+            - `created_at`: timestamp
         - `external`
+            - `_id`
+            - `URL`: string
+            - `title`: string
+            - `created_at`: timestamp
 
 
 ## How to query

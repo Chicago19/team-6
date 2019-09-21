@@ -16,14 +16,16 @@ class ScreenOne extends Component {
     console.log(this.props, "props is here");
     return (
       <View style={styles.container}>
+         <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
         <TouchableHighlight
           onPress={() => navigate("ScreenTwo", {screen: "Screen Two"})}
           style={styles.button}>
-          <Text
-            style={styles.buttonText}>Tap To Begin</Text>
-            
+       
+        <Text style={styles.buttonText}>Tap To Begin</Text>
+        
         </TouchableHighlight>
-        <ImageBackground source={require('../static/purplehex.jpg')} style={{width: '100%', height: '100%'}}></ImageBackground>
+        </ImageBackground>
+       
       </View>
     );
   }
@@ -36,15 +38,18 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   button: {
+    flex:1,
     alignSelf: 'stretch',
     marginLeft: 10,
     marginRight: 10,
     borderRadius: 5,
     height: 40,
     justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
   buttonText: {
-    color: 'black',
+    color: 'white',
     fontSize: 22,
     alignSelf: 'center'
   }

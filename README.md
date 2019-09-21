@@ -10,10 +10,10 @@ Our project run using React.JS for the front-end, Express.JS for the backend, an
 
 1. npm/npx (npx comes with npm)
 2. nodemon; `npm install --save-dev nodemon`
-3. react-scripts; `npm i react-scripts`
+3. react-scripts; `npm install react-scripts`
 4. react-dom; `npm install react react-dom --save`
 4. concurrently; `npm install concurrently --save`
-5. MongoDB; `npm install --save mongodb`
+5. MongoDB; `npm install mongodb --save`
 
 Then, `cd` into the `parents` folder and run `npm run dev`.
 

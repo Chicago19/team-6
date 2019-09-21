@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Animated, Text, View, Alert, Button, ImageBackground, Image } from 'react-native';
+import { Animated, Text, View, Alert, Button, ImageBackground, Image, TouchableWithoutFeedback } from 'react-native';
+//import Parent from "./parent.js";
 
   const FadeInView = (props) => {
     const [fadeAnim] = useState(new Animated.Value(0))  // Initial value for opacity: 0
@@ -26,28 +27,39 @@ import { Animated, Text, View, Alert, Button, ImageBackground, Image } from 'rea
     );
   }
 
+  const showPage = () => {
+    return(
+      <View>
+      <Text>"Hello World"</Text>
+      </View>
+    );
+  }
   // You can then use your `FadeInView` in place of a `View` in your components:
   export default Child = () => {
     return (
       <ImageBackground source={require('../children6/purplehex.jpg')} style={{width: '100%', height: '100%'}}>
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <View style={{width: 300, height: 50, backgroundColor: 'white'}}>
-         <Image source={require('../children6/ccaclogo.jpg')} style={{width: '100%', height: '300%'}}/>
+           <Image source={require('../children6/ccaclogo.jpg')} style={{width: '100%', height: '300%'}}/>
       </View>
       </View>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <FadeInView style={{width: 250, height: 40, backgroundColor: '#00000000'}}>
-            <Button title="Parents" color="white"/>
-          </FadeInView>
+
+          <TouchableWithoutFeedback>
+            <Text onPress={() => Alert.alert('Go to parent page')} style={{color: 'white', fontSize: 48 }}>Parents</Text>
+          </TouchableWithoutFeedback>
+
           <FadeInView style={{width: 250, height: 50}}>
             <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
           </FadeInView>
           <FadeInView style={{width: 250, height: 50}}>
             <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}></Text>
           </FadeInView>
-          <FadeInView style={{width: 250, height: 40, backgroundColor: '#00000000'}}>
-            <Button title="Children" color="white" onPress={() => Alert.alert('Go to child page')}/>
-          </FadeInView>
+
+          <TouchableWithoutFeedback>
+            <Text onPress={() => showPage()} style={{color: 'white', fontSize: 48 }}>Children</Text>
+          </TouchableWithoutFeedback>
+
         </View>
       </ImageBackground>
 
@@ -73,6 +85,11 @@ import { Animated, Text, View, Alert, Button, ImageBackground, Image } from 'rea
       borderBottomColor: '#737373',
       borderBottomWidth: StyleSheet.hairlineWidth,
     },
+    image: {
+      width: Dimensions.get('window').width,
+      height: Dimensions.get('window').height
+    }
   });
 
 }
+

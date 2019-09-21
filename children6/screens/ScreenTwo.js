@@ -13,7 +13,7 @@ import {
 class ScreenTwo extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      title: `Chicago Children's Advocacy Center`,
+      title: `CCAC Family Portal`,
     }
   };
   render() {

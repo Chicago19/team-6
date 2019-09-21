@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-
-import "./External.css";
-
 import "./External.scss";
 
 class External extends Component {

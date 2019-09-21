@@ -118,13 +118,13 @@ class ScreenThree extends Component {
           id: 16,
           name: "Sonic Dash",
           category: "teens",
-          url: ""
+          url: "https://apps.apple.com/us/app/sonic-dash/id582654048"
         },
         {
           id: 17,
           name: "Subway Surfer",
           category: "teens",
-          url: ""
+          url: "https://apps.apple.com/us/app/subway-surfers/id512939461"
         },
         {
           id: 18,
@@ -136,7 +136,7 @@ class ScreenThree extends Component {
           id: 19,
           name: "Word Search",
           category: "teens",
-          url: ""
+          url: "https://apps.apple.com/us/app/word-search/id1357802596"
         }
       ]
     };

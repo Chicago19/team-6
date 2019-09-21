@@ -1,10 +1,16 @@
 #resources-sidebar {
   li {
-    display: block;
+    color: black;
+    padding-top: 20px;
   }
   text-align: center;
   cursor: pointer;
   width: 20%;
+}
+
+#header {
+  width: 20%;
+  padding-left: 50px;
 }
 
 .pdf-viewer{
